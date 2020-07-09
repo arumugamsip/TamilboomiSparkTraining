@@ -18,7 +18,7 @@ object SparkContextExample {
   val sqlCon:SQLContext = spark.sqlContext
 
   val sqlContext = new org.apache.spark.sql.SQLContext(spark.sparkContext)
-
+try{
   println("First SparkContext:")
   println("APP Name :"+spark.sparkContext.appName);
   println("Deploy Mode :"+spark.sparkContext.deployMode);
@@ -33,5 +33,7 @@ object SparkContextExample {
   println("APP Name :"+sparkSession2.sparkContext.appName);
   println("Deploy Mode :"+sparkSession2.sparkContext.deployMode);
   println("Master :"+sparkSession2.sparkContext.master);
+}
+
   }
 }
